@@ -256,7 +256,70 @@ a {
   transition: 5s;
 }
 
-/* animation */
+/* contact__btn */
+
+/* contact__btn */
+
+/* contact__btn */
+
+/* contact__btn */
+
+/* contact__btn */
+
+.contact__inner {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  bottom: 3em;
+  padding: 0;
+  left: 2em;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.contact__inner.open {
+  height: 65vh;
+  left: 1em;
+  padding: 1em;
+}
+
+.contact__btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 1em 0;
+  padding: 1em;
+  border-radius: 5px;
+  background: #1d2741;
+  filter: drop-shadow(0 0 5px #5676c5);
+}
+
+.contact__btns.control-btn {
+  position: fixed;
+  bottom: 1em;
+  left: 2em;
+  margin: 0;
+}
+
+.contact__btn-close,
+.contact__btn-open {
+  display: none;
+}
+
+.contact__btn-close.open,
+.contact__btn-open.open {
+  display: flex;
+}
+
+.contact__btn-close {
+  display: none;
+}
+
+.contact__btns > img {
+  width: 30px;
+  height: 30px;
+}
 
 /* animation */
 
@@ -265,6 +328,18 @@ a {
 /* animation */
 
 /* animation */
+
+/* animation */
+
+/* media */
+
+/* media */
+
+/* media */
+
+/* media */
+
+/* media */
 
 @media (max-width: 1200px) {
   .wrapper {
@@ -290,6 +365,9 @@ a {
   p {
     font-size: 1em;
   }
+  .header__inner {
+    flex-direction: column;
+  }
   .header__img > img {
     width: 100px;
     height: 100px;
@@ -297,25 +375,47 @@ a {
   .btn__inner-item.social-btns {
     display: none;
   }
+  .contact {
+    display: flex;
+  }
+  h1,
+  h2,
+  p,
+  .header__img {
+    text-align: center;
+  }
+  .gallery__item-box {
+    display: flex;
+    align-items: center;
+  }
+  .gallery {
+    margin: 0 0 5em 0;
+  }
+  .gallery__inner {
+    flex-direction: column;
+  }
+  .gallery__inner-item {
+    width: 100%;
+    margin: 0 0 4em 0;
+  }
+  .gallery__img > img:hover.top-animation {
+    margin-top: -500px;
+  }
 }
 @media (max-width: 576px) {
   .header__inner {
     flex-direction: column;
     padding: 1em;
-  }
-  .header__img {
-    text-align: center;
+    margin: 0.5em 0 0.5em 0;
   }
   .header__text {
     padding: 0;
   }
-  h1 {
-    text-align: center;
+  .btn__inner {
+    justify-content: space-between;
   }
-  h2 {
-    text-align: center;
-  }
-  p {
-    text-align: center;
+  .btn__inner-item.main-btns {
+    max-width: 49%;
+    margin: 0;
   }
 }
