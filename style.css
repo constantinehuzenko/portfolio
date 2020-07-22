@@ -15,21 +15,21 @@ body {
 h1 {
   margin: 0;
   padding: 0;
-  font-size: 42px;
+  font-size: 2.5em;
   color: #3e8bff;
 }
 
 h2 {
   margin: 0;
   padding: 0;
-  font-size: 28px;
+  font-size: 2em;
   color: #ff5e84;
 }
 
 p {
   margin: 0;
   padding: 0;
-  font-size: 22px;
+  font-size: 1.5em;
 }
 
 a {
@@ -54,19 +54,19 @@ a {
 
 .header__inner {
   display: flex;
-  margin: 20px 0 20px 0;
-  padding: 30px;
+  margin: 1.5em 0 1.5em 0;
+  padding: 2em;
   border-radius: 5px;
   background: #1d2741;
   transition: 0.5s all;
 }
 
 .header__text {
-  margin: 0 0 0 40px;
+  margin: 0 0 0 2em;
 }
 
 .header__text > p {
-  margin: 15px 0 0 0;
+  margin: 1em 0 0 0;
 }
 
 .header__img > img {
@@ -85,12 +85,8 @@ a {
 
 .btn__inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
-}
-
-.btn__inner-left {
-  display: flex;
 }
 
 .btn__inner-item {
@@ -103,9 +99,10 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 180px;
+  width: 100%;
+  max-width: 180px;
   height: 50px;
-  margin: 0 20px 0 0;
+  margin: 0 1em 0 0;
 }
 
 .btn__inner-item.main-btns:first-child {
@@ -118,7 +115,7 @@ a {
   align-items: center;
   width: 50px;
   height: 50px;
-  margin: 0 20px 0 0;
+  margin: 0 1em 0 0;
 }
 
 .btn__inner-item.social-btns > img {
@@ -139,31 +136,22 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin: 3em 0 0 0;
 }
 
 .gallery__inner-item {
   display: flex;
-  position: relative;
-  flex: 1 400px;
   flex-direction: column;
+  position: relative;
+  width: 49%;
+  margin: 0 0 5em 0;
   border-radius: 5px;
-  max-height: 260px;
   filter: drop-shadow(0px 0px 2px #5676c5);
-}
-
-.gallery__inner-item:nth-child(3),
-.gallery__inner-item:nth-child(4) {
-  margin: 110px 0;
-}
-
-.gallery__inner-item:nth-child(2n + 1) {
-  margin-right: 20px;
 }
 
 .gallery__img {
   position: relative;
-  min-height: 300px;
+  min-height: 260px;
   z-index: 0;
   border-radius: 5px;
   overflow: hidden;
@@ -189,7 +177,7 @@ a {
 
 .gallery__skills-item {
   margin: 2.5px;
-  padding: 5px 20px;
+  padding: 0.5em 1.5em;
   border-radius: 40px;
   background: #1d2741;
 }
@@ -197,17 +185,17 @@ a {
 .gallery__item-box {
   display: flex;
   position: absolute;
-  bottom: -40px;
+  bottom: 0px;
   justify-content: space-between;
   width: 100%;
-  padding: 15px 10px 10px 10px;
+  padding: 1em 0.5em 0.5em 0.5em;
   border-radius: 0 0 5px 5px;
   background: #1d2741;
   z-index: -10;
 }
 
 .gallery__inner-item:hover .gallery__item-box {
-  bottom: -90px;
+  bottom: -50px;
 }
 
 .gallery__box-btn {
@@ -232,7 +220,7 @@ a {
 
 /* hover */
 
-.header__img:hover,
+.header__img > img:first-child:hover,
 .btn__inner-item:hover {
   filter: drop-shadow(5px 5px 9px #5676c5);
   transform: translate3d(-5px, -5px, 0);
@@ -243,14 +231,14 @@ a {
 }
 
 .gallery__inner-item:hover .gallery__img-skills {
-  left: -15px;
+  left: -20px;
 }
 
 .gallery__box-btn:hover {
   opacity: 0.8;
 }
 
-.header__img,
+.header__img > img,
 .btn__inner-item,
 .gallery__item-box,
 .gallery__inner-item,
@@ -279,24 +267,55 @@ a {
 /* animation */
 
 @media (max-width: 1200px) {
-
+  .wrapper {
+    margin: 0 1em;
+  }
 }
 @media (max-width: 992px) {
   .wrapper {
-    margin: 0 8px;
-  }
-  .header__inner {
-    flex-direction: column;
-    padding: 10px;
+    margin: 0 0.5em;
   }
   .header__text {
     margin: 0;
-  }
-  .btn__inner-left {
-    flex-direction: column;
+    padding: 1em;
   }
 }
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1em;
+  }
+  .header__img > img {
+    width: 100px;
+    height: 100px;
+  }
+  .btn__inner-item.social-btns {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
+  .header__inner {
+    flex-direction: column;
+    padding: 1em;
+  }
+  .header__img {
+    text-align: center;
+  }
+  .header__text {
+    padding: 0;
+  }
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
 }
