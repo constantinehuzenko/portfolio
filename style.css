@@ -267,6 +267,10 @@ a {
 
 /* contact__btn */
 
+.contact{
+  display: none;
+}
+
 .contact__inner {
   position: fixed;
   display: flex;
