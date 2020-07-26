@@ -7,9 +7,11 @@ body {
   margin: 0;
   padding: 0;
   background: url(images/LinkedinBanner.png);
+  background-color: #111111;
+  background-position: left;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: contain 100%;
+  background-size: cover;
   font-family: "Montserrat", sans-serif;
   color: white;
 }
